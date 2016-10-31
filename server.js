@@ -32,8 +32,8 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 // Create chat bot (fill these in after registering bot with Bot Developer Portal)
 var connector = new builder.ChatConnector({
-    appId: config.CONFIGURATIONS.APP_ID,
-    appPassword: config.CONFIGURATIONS.APP_PASSWORD
+    appId: process.env.BOTFRAMEWORK_APPID, 
+    appSecret: process.env.BOTFRAMEWORK_APPSECRET 
 });
 
 var bot = new builder.UniversalBot(connector, {
