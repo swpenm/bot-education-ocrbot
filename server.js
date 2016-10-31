@@ -6,6 +6,7 @@ var config = require('./configuration');
 // Bot Setup
 //=========================================================
 
+/******** FOR TESTING WITH CONSOLE CONNECTION *********
 
 // Create chat bot
 // Create bot and bind to console
@@ -16,6 +17,43 @@ var bot = new builder.UniversalBot(connector, {
    defaultLocale: "en"
  }
  });
+
+******************************************************/
+
+
+/******** FOR USE WITH BOT EMULATOR AND/OR FOR DEPLOYMENT *********
+*/
+
+// Setup Restify Server
+var server = restify.createServer();
+server.listen(process.env.port || process.env.PORT || 3978, function () {
+    console.log('%s listening to %s', server.name, server.url);
+});
+
+// Create chat bot (fill these in after registering bot with Bot Developer Portal)
+var connector = new builder.ChatConnector({
+    appId: config.CONFIGURATIONS.APP_ID,
+    appPassword: config.CONFIGURATIONS.APP_PASSWORD
+});
+
+var bot = new builder.UniversalBot(connector, {
+   localizerSettings: {
+   botLocalePath: "./locale",
+   defaultLocale: "en"
+ }
+ });
+ 
+server.post('/api/messages', connector.listen());
+
+// Serve a static web page
+server.get(/.*/, restify.serveStatic({
+	'directory': '.',
+	'default': 'index.html'
+}));
+
+/*
+****************************************************************/
+
 
 //=========================================================
 // Bots Dialogs
