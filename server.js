@@ -24,6 +24,7 @@ var bot = new builder.UniversalBot(connector, {
 /******** FOR USE WITH BOT EMULATOR AND/OR FOR DEPLOYMENT *********
 */
 
+
 // Setup Restify Server
 var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
@@ -32,17 +33,10 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 // Create chat bot (fill these in after registering bot with Bot Developer Portal)
 var connector = new builder.ChatConnector({
-    appId: process.env.MICROSOFT_APP_ID, 
-    appSecret: process.env.MICROSOFT_APP_PASSWORD 
+    appId: process.env.MICROSOFT_APP_ID,
+    appPassword: process.env.MICROSOFT_APP_PASSWORD
 });
-
-var bot = new builder.UniversalBot(connector, {
-   localizerSettings: {
-   botLocalePath: "./locale",
-   defaultLocale: "en"
- }
- });
- 
+var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
 // Serve a static web page
