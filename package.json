@@ -1,27 +1,30 @@
 {
-  "name": "imagecap",
+  "name": "bot-education-ocrbot",
   "version": "1.0.0",
-  "private": true,
+  "description": "A basic OCR bot built with Microsoft Bot Framework",
+  "main": "server.js",
   "dependencies": {
-    "botbuilder": "^3.2.3",
+    "botbuilder": "^3.3.3",
+    "request": "^2.75.0",
     "restify": "^4.1.1"
   },
-  "devDependencies": {
-    "request": "^2.75.0"
-  },
-  "description": "Image captions",
-  "main": "app.js",
+  "devDependencies": {},
   "scripts": {
-    "test": "app.js"
+    "test": "na",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "git+https://github.com/michhar/bot-education-ocrbot.git"
   },
   "keywords": [
-    "image",
-    "caption"
+    "ocr",
+    "bot"
   ],
-  "author": "na",
-  "license": "MIT"
+  "author": "M. Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michhar/bot-education-ocrbot/issues"
+  },
+  "homepage": "https://github.com/michhar/bot-education-ocrbot#readme"
 }
