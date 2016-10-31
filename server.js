@@ -24,20 +24,21 @@ var bot = new builder.UniversalBot(connector, {
 /******** FOR USE WITH BOT EMULATOR AND/OR FOR DEPLOYMENT *********
 */
 
+// Get secrets from server environment
+var botConnectorOptions = { 
+    appId: process.env.BOTFRAMEWORK_APPID, 
+    appPassword: process.env.BOTFRAMEWORK_APPSECRET
+};
+
+// Create bot
+var connector = new builder.ChatConnector(botConnectorOptions);
+var bot = new builder.UniversalBot(connector);
 
 // Setup Restify Server
 var server = restify.createServer();
-server.listen(process.env.port || process.env.PORT || 3978, function () {
-    console.log('%s listening to %s', server.name, server.url);
-});
 
-// Create chat bot (fill these in after registering bot with Bot Developer Portal)
-var connector = new builder.ChatConnector({
-    appId: process.env.MICROSOFT_APP_ID,
-    appPassword: process.env.MICROSOFT_APP_PASSWORD
-});
-var bot = new builder.UniversalBot(connector);
-server.post('/api/messages', connector.listen());
+// Handle Bot Framework messages
+server.post('/api/messages', connector.verifyBotFramework(), connector.listen());
 
 // Serve a static web page
 server.get(/.*/, restify.serveStatic({
