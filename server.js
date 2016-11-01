@@ -11,12 +11,7 @@ var config = require('./configuration');
 // Create chat bot
 // Create bot and bind to console
 var connector = new builder.ConsoleConnector().listen();
-var bot = new builder.UniversalBot(connector, {
-   localizerSettings: {
-   botLocalePath: "./locale",
-   defaultLocale: "en"
- }
- });
+var bot = new builder.UniversalBot(connector);
 
 ******************************************************/
 
@@ -53,26 +48,6 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 
 /*
 ****************************************************************/
-
-
-//=========================================================
-// Bots Events
-//=========================================================
-
-//Sends greeting message when the bot is first added to a conversation
-bot.on('conversationUpdate', message => {
-    if (message.membersAdded) {
-        message.membersAdded.forEach(identity => {
-            if (identity.id === message.address.bot.id) {
-                const reply = new builder.Message()
-                    .address(message.address)
-                    .text("Hi! I am OCRBot. I can read text from an image if you provide a link to one.");
-                bot.send(reply);
-            }
-        });
-    }
-});
-
 
 //=========================================================
 // Bots Dialogs
