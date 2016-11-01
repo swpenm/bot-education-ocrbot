@@ -1,7 +1,7 @@
 var _config = {
     CHAT_CONNECTOR: {
-        APP_ID: "85fad510-cb7b-46dc-a783-37aeae7519fd", //You can obtain an APP ID and PASSWORD here: https://dev.botframework.com/bots/new
-        APP_PASSWORD: "aG9UGRagyafStSMWYSJvSPR"
+        APP_ID: process.env.MICROSOFT_APP_ID, //You can obtain an APP ID and PASSWORD here: https://dev.botframework.com/bots/new
+        APP_PASSWORD: process.env.MICROSOFT_APP_PASSWORD
     },
     COMPUTER_VISION_SERVICE: {
         API_URL: "https://api.projectoxford.ai/vision/v1.0/",
