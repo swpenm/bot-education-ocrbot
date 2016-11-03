@@ -42,11 +42,11 @@ You will then be able to gain access to your keys.
   1.  Click on the debug icon in left-hand panel (bug in circle)
   *  At the top left click on the settings "wheel" icon.  A `launch.json` file is automatically created. (Will only need to do this once)
   *  Modify the `console` variable to hold `externalTerminal`
-  *  To the right of the green "run" button click on where it says "Launch" and change this to "Attach to Process"
+  *  To the right of the green "run" button click on where it says "Launch" and change this to **"Attach to Process"**
 5.  Start the emulator (make sure this is in your PATH or go to its folder) with:
   - `$ mono BFEmulator.exe` (Mac/Unix)
   - double click on **BFEmulator.exe** to opn the console program (Windows)
-* Set up the BFEmulator by typing `/settings` and entering in the following settings values:
+* Set up the BFEmulator by typing `/settings` and entering in the following settings values (on Windows this may be automatic):
   - `Port:                9000`
   - `Emulator ServiceUrl: http://localhost:9000/`
   - `Bot Endpoint:        http://localhost:3978/api/messages`
