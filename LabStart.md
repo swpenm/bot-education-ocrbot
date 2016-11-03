@@ -18,7 +18,7 @@ To sign up for the Computer Vision trial, follow these instructions:
 
 You will then be able to gain access to your keys.
 
-### Command Terminal for running node and mono
+### Command Terminal for running node and mono (mono needed on Mac/Unix, but not Windows)
 
 1.  Ensure that the **PATH sys variable** has node and mono 
   * on Windows, right-click the start menu and select System -> Advanced system settings -> Environment variables... and then under System variables, check the Path
@@ -44,7 +44,8 @@ You will then be able to gain access to your keys.
   *  Modify the `console` variable to hold `externalTerminal`
   *  To the right of the green "run" button click on where it says "Launch" and change this to "Attach to Process"
 5.  Start the emulator (make sure this is in your PATH or go to its folder) with:
-  - `$ mono BFEmulator.exe`
+  - `$ mono BFEmulator.exe` (Mac/Unix)
+  - double click on **BFEmulator.exe** to opn the console program (Windows)
 * Set up the BFEmulator by typing `/settings` and entering in the following settings values:
   - `Port:                9000`
   - `Emulator ServiceUrl: http://localhost:9000/`
