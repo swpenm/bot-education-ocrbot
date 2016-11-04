@@ -33,10 +33,9 @@ var bot = new builder.UniversalBot(connector);
 var server = restify.createServer();
 
 // Handle Bot Framework messages
-// server.post('/api/messages', connector.verifyBotFramework(), connector.listen());
 server.post('/api/messages', connector.listen());
 
-// Serve a static web page
+// Serve a static web page - for testing deployment
 server.get(/.*/, restify.serveStatic({
 	'directory': '.',
 	'default': 'index.html'
