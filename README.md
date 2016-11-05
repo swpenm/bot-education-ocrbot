@@ -3,13 +3,8 @@ A Node.js bot built with the MS Bot Framework for image OCR
 
 ## To run
 
-### Get the prereqs (all install links can be found [here](https://github.com/michhar/bot-education/wiki/ODSC-Conference-Syllabus#prerequisites-for-hands-on-labs)):
-* Node.js (installs with npm now)
-* Bot Framework Console Emulator
-* Visual Studio Code or similar tool with intellisense and a debugger
-* (Recommended) Enhanced commad line tools such as Powershell
-* Knowledge of working on the command line in Windows or Unix (pretty much `dir == ls` and `move == mv` and a few others)
-* Git to pull down samples
+### Get the prereqs 
+* all install links can be found at the wiki on this repo or https://aka.ms/odscbots:
 
 ### On command line
 
