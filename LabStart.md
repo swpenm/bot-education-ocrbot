@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-Fufill those listed on this wiki here:  https://github.com/michhar/bot-education/wiki/Conference-Syllabus#prerequisites-for-hands-on-labs
+Fufill those listed on the wiki on this repo in the Syllabus, [here](https://github.com/michhar/bot-education-ocrbot/wiki/Data-Science-Conference-Syllabus).
 
 ## Setup
 
@@ -29,7 +29,6 @@ You will then be able to gain access to your keys.
 ### Visual Studio Code
 
 2.  Copy the github repo to another folder for "local dev"
-
 
 ## Instructions
 
