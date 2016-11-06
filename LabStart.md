@@ -32,16 +32,16 @@ You will then be able to gain access to your keys.
 
 ## Instructions
 
-3.  Open the "local dev" folder in VSCode (Open Folder...)
-4.  Ensure that the COMPUTER_VISION_SERVICE API_KEY in `configuration.js` has your trial key from Computer Vision obtained above.
-3.  Start the process in the command terminal by
+3.  Open the "local dev" folder in VSCode (Open Folder...).
+3.  Start the process in the command terminal with (type into the commmand prompt):
   - `$ node --debug-brk server.js` (Mac, Linux)
   - `$ node server.js` (Windows)
-4.  Attach the debuger by:
-  1.  Click on the debug icon in left-hand panel (bug in circle)
+4.  Attach the debuger (Mac tested only right now, if on Windows skip to (4)) by:
+  1.  Click on the debug icon in left-hand panel (bug in circle).
   *  At the top left click on the settings "wheel" icon.  A `launch.json` file is automatically created. (Will only need to do this once)
-  *  Modify the `console` variable to hold `externalTerminal`
-  *  To the right of the green "run" button click on where it says "Launch" and change this to **"Attach to Process"**
+  *  Modify the `console` variable to hold `externalTerminal`.
+  *  To the right of the green "run" button click on where it says "Launch" and change this to **"Attach to Process"**.
+  *  Now click on the green "run" button and choose your process which you started earlier (if it does not show up confirm you started it and that you've set up the debugger properly).
 5.  Start the emulator (make sure this is in your PATH or go to its folder) with:
   - `$ mono BFEmulator.exe` (Mac/Unix)
   - double click on **BFEmulator.exe** to open the console program (Windows)
@@ -55,5 +55,6 @@ You will then be able to gain access to your keys.
 
 ## Advanced exercise
 
-Add sentiment analysis to the text by calling the Text Analytics sentiment rest API.
+* Add the ability to upload an attachment from the user (check out [this](https://github.com/Microsoft/BotBuilder-Samples/blob/master/Node/core-ReceiveAttachment/app.js) bot)
+* Add sentiment analysis to the text by calling the Text Analytics sentiment rest API (will have to sign up for a trial key like you did with the Vision API key above).
 
