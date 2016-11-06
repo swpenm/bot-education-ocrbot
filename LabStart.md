@@ -53,8 +53,12 @@ You will then be able to gain access to your keys.
   - `AppPassword:         disabled`
 * Test with a link to an image online that contains clear text and wait a second or two for the bot's response.  It should be the text found in the image (run through the OCR model in Cognitive Services).
 
-## Advanced exercise
+## Advanced exercises
 
 * Add the ability to upload an attachment from the user (check out [this](https://github.com/Microsoft/BotBuilder-Samples/blob/master/Node/core-ReceiveAttachment/app.js) bot)
 * Add sentiment analysis to the text by calling the Text Analytics sentiment rest API (will have to sign up for a trial key like you did with the Vision API key above).
+
+## Very Advance exercise
+
+* Implement an Eliza bot using this js code project as a base:  http://www.masswerk.at/elizabot/
 
