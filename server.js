@@ -57,7 +57,7 @@ bot.dialog('/', function (session) {
     var extractedUrl = extractUrl(session.message);
 
     if (extractedUrl === "") {
-        session.send("Hello.  I'm a OCRBot.  Please give me an image link and I'll look for words.");
+        session.send("Hello.  I'm an OCRBot.  Please give me an image link and I'll look for words.");
     }
 
     describeImage(extractedUrl, function (error, response, body) {
