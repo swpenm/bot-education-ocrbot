@@ -33,10 +33,11 @@ You will then be able to gain access to your keys.
 ## Instructions
 
 3.  Open the "local dev" folder in VSCode (Open Folder...).
+2.  Modify, in `configuration.js`, `COMPUTER_VISION_SERVICE.API_KEY` to contain your API key from above trial sign-up process.
 3.  Start the process in the command terminal with (type into the commmand prompt):
   - `$ node --debug-brk server.js` (Mac, Linux)
   - `$ node server.js` (Windows)
-4.  Attach the debuger (Mac tested only right now, if on Windows skip to (4)) by:
+4.  Attach the debuger (Mac tested only right now, if on Windows skip to (5)) by:
   1.  Click on the debug icon in left-hand panel (bug in circle).
   *  At the top left click on the settings "wheel" icon.  A `launch.json` file is automatically created. (Will only need to do this once)
   *  Modify the `console` variable to hold `externalTerminal`.
