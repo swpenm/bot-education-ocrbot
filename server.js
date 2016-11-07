@@ -80,7 +80,7 @@ var readImageText = function _readImageText(url, callback) {
             'ocp-apim-subscription-key': config.CONFIGURATIONS.COMPUTER_VISION_SERVICE.API_KEY,
             'content-type': 'application/json'
         },
-        body: {url: url},
+        body: {url: url, language: "en"},
         json: true
     };
 
