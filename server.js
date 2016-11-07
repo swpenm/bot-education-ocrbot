@@ -60,8 +60,8 @@ bot.dialog('/', function (session) {
         session.send("Hello.  I'm an OCRBot.  Please give me an image link and I'll look for words.");
     }
 
-    describeImage(extractedUrl, function (error, response, body) {
-        session.send(extractCaption(body));
+    readImageText(extractedUrl, function (error, response, body) {
+        session.send(extractText(body));
     })
 });
 
@@ -71,7 +71,7 @@ bot.dialog('/', function (session) {
 
 var request = require("request");
 
-var describeImage = function _describeImage(url, callback) {
+var readImageText = function _readImageText(url, callback) {
 
     var options = {
         method: 'POST',
@@ -88,7 +88,7 @@ var describeImage = function _describeImage(url, callback) {
 
 };
 
-var extractCaption = function _extractCaption(bodyMessage) {
+var extractText = function _extractText(bodyMessage) {
 
     if (typeof bodyMessage.regions === "undefined") return "";
 
