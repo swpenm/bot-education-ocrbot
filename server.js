@@ -113,7 +113,7 @@ var extractText = function _extractText(bodyMessage) {
         return text;
     }
 
-    return "Sorry, I can't recognize it :( !";
+    return "Sorry, I can't find text in it :( !";
 };
 
 //=========================================================
