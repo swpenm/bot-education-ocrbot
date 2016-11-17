@@ -16,7 +16,7 @@ To sign up for the Computer Vision trial, follow these instructions:
 *  Click on "My account" in the upper right-hand corner to log in to Cognitive Services.
 *  You will see a 'Hello' welcome page with a listing of trials from which you can request new ones.  Please select "Entity Linking", "Computer Vision" and "Text Analytics".  Read and decide if you agree to Microsoft Cognitive Services Terms and Microsoft Privacy Statement.  After agreeing, click "Subscribe" to sign up for these trials.  
 
-Use this temp key: 4c1c05b58bbe4abe9616139fe8a0478
+Use this temp key: d3ad301b07224d958b7e71ccdf7d2356
 
 You will then be able to gain access to your keys.
 
