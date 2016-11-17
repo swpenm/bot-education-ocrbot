@@ -1,10 +1,10 @@
 # First Lab
 
-> On Windows, Mac and Unix, the instructions are pretty much the same (exceptions include:  command terminal program, adding to the system PATH variable, and other setup items).
+> On Windows, Mac and Unix, the instructions are pretty much the same
 
 ## Prerequisites
 
-Fufill those listed on the wiki on this repo in the Syllabus, [here](https://github.com/michhar/bot-education-ocrbot/wiki/Data-Science-Conference-Syllabus).
+Fufill those listed on the wiki on this repo in the Syllabus, [here](https://github.com/michhar/bot-education-ocrbot/wiki/Data-Science-Conference-Syllabus#prerequisites-for-hands-on-labs).
 
 ## Setup
 
@@ -18,11 +18,9 @@ To sign up for the Computer Vision trial, follow these instructions:
 
 You will then be able to gain access to your keys.
 
-### Command Terminal for running node and mono (mono needed on Mac/Unix, but not Windows)
+### Setup Environment
 
-1.  Ensure that the **PATH sys variable** has node and mono 
-  * on Windows, right-click the start menu and select System -> Advanced system settings -> Environment variables... and then under System variables, check the Path
-2.  Test the mono and node setups to ensure they are in your path and working.  Type `mono` into a command prompt.  You should see a help message.  If the command is not found, try opening a new terminal window.  Do the same for `node`.
+1.  Ensure you have the emulator installed (found in the prereqs link above).
 3.  Git clone this repository into a suitable folder on your machine
 <br> `$ git clone https://github.com/michhar/bot-education-ocrbot.git`
 
@@ -44,14 +42,13 @@ You will then be able to gain access to your keys.
   *  To the right of the green "run" button click on where it says "Launch" and change this to **"Attach to Process"**.
   *  Now click on the green "run" button and choose your process which you started earlier (if it does not show up confirm you started it and that you've set up the debugger properly).
 5.  Start the emulator (make sure this is in your PATH or go to its folder) with:
-  - `$ mono BFEmulator.exe` (Mac/Unix)
-  - double click on **BFEmulator.exe** to open the console program (Windows)
-* Set up the BFEmulator by typing `/settings` and entering in the following settings values (on Windows this may be automatic):
-  - `Port:                9000`
-  - `Emulator ServiceUrl: http://localhost:9000/`
+  - Open the emulator (search for "botframework-emulator" on Windows).  These are the settings
+  - `Port:                (automatic)`
+  - `Emulator ServiceUrl: http://localhost:<Port>/ (automatic)`
   - `Bot Endpoint:        http://localhost:3978/api/messages`
-  - `AppId:               disabled`
-  - `AppPassword:         disabled`
+  - `AppId:               (keep empty)`
+  - `AppPassword:         (keep empty)`
+*  Click on "Enter your endpoint URL", click on the URL, keep App ID and App Password empty, hit "Connect"
 * Test with a link to an image online that contains clear text and wait a second or two for the bot's response.  It should be the text found in the image (run through the OCR model in Cognitive Services).
 
 ## Advanced exercises
