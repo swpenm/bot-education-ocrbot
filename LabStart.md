@@ -1,4 +1,4 @@
-# First Lab
+# Lab:  Setup Locally and Emulate
 
 > On Windows, Mac and Unix, the instructions are pretty much the same
 
